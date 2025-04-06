@@ -1,17 +1,17 @@
-/*Добавени функции за печат на масиви според типа им.
+/*Г„Г®ГЎГ ГўГҐГ­ГЁ ГґГіГ­ГЄГ¶ГЁГЁ Г§Г  ГЇГҐГ·Г ГІ Г­Г  Г¬Г Г±ГЁГўГЁ Г±ГЇГ®Г°ГҐГ¤ ГІГЁГЇГ  ГЁГ¬.
 
-Ограничен печата на огромните масиви (като a[50][30] и v[10][10]) до по-малък размер за по-лесно визуализиране.
+ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ ГЇГҐГ·Г ГІГ  Г­Г  Г®ГЈГ°Г®Г¬Г­ГЁГІГҐ Г¬Г Г±ГЁГўГЁ (ГЄГ ГІГ® a[50][30] ГЁ v[10][10]) Г¤Г® ГЇГ®-Г¬Г Г«ГєГЄ Г°Г Г§Г¬ГҐГ° Г§Г  ГЇГ®-Г«ГҐГ±Г­Г® ГўГЁГ§ГіГ Г«ГЁГ§ГЁГ°Г Г­ГҐ.
 
-Инициализирани празните масиви с {} (за да са с 0) или примерно съдържание (в char масива). */
+Г€Г­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г Г­ГЁ ГЇГ°Г Г§Г­ГЁГІГҐ Г¬Г Г±ГЁГўГЁ Г± {} (Г§Г  Г¤Г  Г±Г  Г± 0) ГЁГ«ГЁ ГЇГ°ГЁГ¬ГҐГ°Г­Г® Г±ГєГ¤ГєГ°Г¦Г Г­ГЁГҐ (Гў char Г¬Г Г±ГЁГўГ ). */
 
 #include <iostream>
 #include <string>
-#include <windows.h> // за SetConsoleOutputCP
+#include <windows.h> // Г§Г  SetConsoleOutputCP
 using namespace std;
 
-/// --- Функция за отпечатване на цели числа (int) с 6 колони ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г¶ГҐГ«ГЁ Г·ГЁГ±Г«Г  (int) Г± 6 ГЄГ®Г«Г®Г­ГЁ ---
 void printArrayInt(int arr[][6], int rows, int cols, const string& name) {
-    cout << "Масив " << name << ":" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << ":" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -21,9 +21,9 @@ void printArrayInt(int arr[][6], int rows, int cols, const string& name) {
     cout << endl;
 }
 
-/// --- Функция за отпечатване на цели числа (int) с 3 колони ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г¶ГҐГ«ГЁ Г·ГЁГ±Г«Г  (int) Г± 3 ГЄГ®Г«Г®Г­ГЁ ---
 void printArrayInt3(int arr[][3], int rows, int cols, const string& name) {
-    cout << "Масив " << name << ":" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << ":" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -33,9 +33,9 @@ void printArrayInt3(int arr[][3], int rows, int cols, const string& name) {
     cout << endl;
 }
 
-/// --- Функция за отпечатване на цели числа (int) с 2 колони ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г¶ГҐГ«ГЁ Г·ГЁГ±Г«Г  (int) Г± 2 ГЄГ®Г«Г®Г­ГЁ ---
 void printArrayInt2(int arr[][2], int rows, int cols, const string& name) {
-    cout << "Масив " << name << ":" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << ":" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -45,9 +45,9 @@ void printArrayInt2(int arr[][2], int rows, int cols, const string& name) {
     cout << endl;
 }
 
-/// --- Функция за отпечатване на реални числа (float) ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г°ГҐГ Г«Г­ГЁ Г·ГЁГ±Г«Г  (float) ---
 void printArrayFloat(float arr[][30], int rows, int cols, const string& name) {
-    cout << "Масив " << name << " (float):" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << " (float):" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -57,9 +57,9 @@ void printArrayFloat(float arr[][30], int rows, int cols, const string& name) {
     cout << endl;
 }
 
-/// --- Функция за отпечатване на реални числа (double) ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г°ГҐГ Г«Г­ГЁ Г·ГЁГ±Г«Г  (double) ---
 void printArrayDouble(double arr[][10], int rows, int cols, const string& name) {
-    cout << "Масив " << name << " (double):" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << " (double):" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -69,9 +69,9 @@ void printArrayDouble(double arr[][10], int rows, int cols, const string& name) 
     cout << endl;
 }
 
-/// --- Функция за отпечатване на символи (char) ---
+/// --- Г”ГіГ­ГЄГ¶ГЁГї Г§Г  Г®ГІГЇГҐГ·Г ГІГўГ Г­ГҐ Г­Г  Г±ГЁГ¬ГўГ®Г«ГЁ (char) ---
 void printArrayChar(char arr[][5], int rows, int cols, const string& name) {
-    cout << "Масив " << name << " (char):" << endl;
+    cout << "ГЊГ Г±ГЁГў " << name << " (char):" << endl;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cout << arr[i][j] << " ";
@@ -83,34 +83,34 @@ void printArrayChar(char arr[][5], int rows, int cols, const string& name) {
 
 int main() {
 
-    SetConsoleOutputCP(1251); // Настройка на конзолата за Windows-1251 (кирилица)
+    SetConsoleOutputCP(1251); // ГЌГ Г±ГІГ°Г®Г©ГЄГ  Г­Г  ГЄГ®Г­Г§Г®Г«Г ГІГ  Г§Г  Windows-1251 (ГЄГЁГ°ГЁГ«ГЁГ¶Г )
 
-    /// Деклариране на масив от float с 50 реда и 30 колони
-    float a[50][30] = {{0}}; // инициализиран с 0
-    printArrayFloat(a, 3, 5, "a (първите 3 реда по 5 колони)");
+    /// Г„ГҐГЄГ«Г Г°ГЁГ°Г Г­ГҐ Г­Г  Г¬Г Г±ГЁГў Г®ГІ float Г± 50 Г°ГҐГ¤Г  ГЁ 30 ГЄГ®Г«Г®Г­ГЁ
+    float a[50][30] = {{0}}; // ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г Г­ Г± 0
+    printArrayFloat(a, 3, 5, "a (ГЇГєГ°ГўГЁГІГҐ 3 Г°ГҐГ¤Г  ГЇГ® 5 ГЄГ®Г«Г®Г­ГЁ)");
 
-    /// Масив от цели числа с 20 реда и 6 колони
+    /// ГЊГ Г±ГЁГў Г®ГІ Г¶ГҐГ«ГЁ Г·ГЁГ±Г«Г  Г± 20 Г°ГҐГ¤Г  ГЁ 6 ГЄГ®Г«Г®Г­ГЁ
     int b[20][6] = {{0}};
-    printArrayInt(b, 3, 6, "b (първите 3 реда)");
+    printArrayInt(b, 3, 6, "b (ГЇГєГ°ГўГЁГІГҐ 3 Г°ГҐГ¤Г )");
 
-    /// Масив от символи с 3 реда и 5 колони
+    /// ГЊГ Г±ГЁГў Г®ГІ Г±ГЁГ¬ГўГ®Г«ГЁ Г± 3 Г°ГҐГ¤Г  ГЁ 5 ГЄГ®Г«Г®Г­ГЁ
     char t[3][5] = {{'A', 'B', 'C', 'D', 'E'}, {'F', 'G', 'H', 'I', 'J'}, {'K', 'L', 'M', 'N', 'O'}};
     printArrayChar(t, 3, 5, "t");
 
-    /// Константа за размерите на квадратен double масив
+    /// ГЉГ®Г­Г±ГІГ Г­ГІГ  Г§Г  Г°Г Г§Г¬ГҐГ°ГЁГІГҐ Г­Г  ГЄГўГ Г¤Г°Г ГІГҐГ­ double Г¬Г Г±ГЁГў
     const int M = 10;
     double v[M][M] = {{0}};
-    printArrayDouble(v, 3, 3, "v (3x3 част)");
+    printArrayDouble(v, 3, 3, "v (3x3 Г·Г Г±ГІ)");
 
-    /// Масив с ръчно зададени стойности
+    /// ГЊГ Г±ГЁГў Г± Г°ГєГ·Г­Г® Г§Г Г¤Г Г¤ГҐГ­ГЁ Г±ГІГ®Г©Г­Г®Г±ГІГЁ
     int z[3][2] = { {1, 3}, {5, 7}, {2, 9} };
     printArrayInt2(z, 3, 2, "z");
 
-    /// Частична инициализация
+    /// Г—Г Г±ГІГЁГ·Г­Г  ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї
     int fi[5][6] = {{1, 2}, {5}, {3, 4, 5}, {2, 3, 4, 5}, {2, 0, 4}};
     printArrayInt(fi, 5, 6, "fi");
 
-    /// Пълна инициализация (еквивалентна на fi)
+    /// ГЏГєГ«Г­Г  ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї (ГҐГЄГўГЁГўГ Г«ГҐГ­ГІГ­Г  Г­Г  fi)
     int fi2[5][6] = {{1, 2, 0, 0, 0, 0},
                      {5, 0, 0, 0, 0, 0},
                      {3, 4, 5, 0, 0, 0},
@@ -118,7 +118,7 @@ int main() {
                      {2, 0, 4, 0, 0, 0}};
     printArrayInt(fi2, 5, 6, "fi2");
 
-    /// Инициализация на int масиви с 3 колони
+    /// Г€Г­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г­Г  int Г¬Г Г±ГЁГўГЁ Г± 3 ГЄГ®Г«Г®Г­ГЁ
     int ma1[4][3] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
     printArrayInt3(ma1, 4, 3, "ma1");
 
